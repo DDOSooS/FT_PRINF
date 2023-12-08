@@ -1,56 +1,43 @@
-
-#include <stdio.h>
 #include "ft_printf.h"
+#include <stdio.h>
+#include <stdint.h>
+#include <limits.h>
 
-int main() {
-    // Test cases
-    printf("\n===============================\n");
-    ft_printf("Character: ||%c||\n", 'A');
-    printf("Character: ||%c||\n", 'A');
-
-    printf("\n===============================\n");
-    ft_printf("String: ||%s||\n", "Hello, World!");
-    ft_printf("String: ||%s||\n", "Hello, World!");
-    int *ptr = NULL;
-    printf("\n===============================\n");
-    ft_printf("Pointer: ||%p||\n", (void*)ptr);
-    printf("Pointer: ||%p||\n", (void*)ptr);
-
-    printf("\n===============================\n");
-    ft_printf("Integer: ||%d|| ||%i||\n", 123, -456);
-    printf("PPInteger: ||%d|| ||%i||\n", 123, -456);
-
-
-    printf("\n===============================\n");
-    ft_printf("Unsigned Integer: ||%u||\n", 789);
-    printf("Unsigned Integer: ||%u||\n", 789);
-
-    printf("\n===============================\n");
-    ft_printf("Hexadecimal (lowercase): ||%x||\n", 0xABCD);
-    printf("Hexadecimal (lowercase): ||%x||\n", 0xABCD);
-
-    printf("\n===============================\n");
-    ft_printf("-%Hexadecimal  (uppercase): ||%X||\n%%");
-    // printf("   Hexadecimal  (uppercase): ||%X||\n%%", 0xABCD);
-
-    // Additional tests
-    printf("\n===============================\n");
-    ft_printf("Percentage: ||%%||\n");
-    printf("Percentage: ||%%||\n");
-
-
-    printf("\n===============================\n");
-    ft_printf("Multiple: ||%d||%s||%c||\n", 42, "Testing", 'Z');
-    printf("Multiple: ||%d||%s||%c||\n", 42, "Testing", 'Z');
-
-    return 0;
+int main ()
+{
+	// ft_printf(" %p \\", (void *) -1);
+	printf("====");
+	char *str = "abde";
+	// printf("=%d=",printf("==%p=",(void *) -9));
+	// ft_printf("\n=%d=\n",ft_printf("==%p=",(void *)-9));
+	printf("\n==%03d==\n",'c');
+	// printf(" %X\\ ", INT_MAX);
+	// printf(" %X \\", INT_MIN);
+	// printf(" %X %X %X %X %X %X %X", INT_MAX, INT_MIN, LONG_MAX, LONG_MIN, ULONG_MAX, 0, -42);
+	// ft_printf("==============");
+	// ft_printf(" %X\\f ", -9);
+	// ft_printf(" %X \\f", INT_MAX);
+	// ft_printf(" %X \\f", INT_MIN);
+	// ft_printf(" %X %X %X %X %X %X %X", INT_MAX, INT_MIN, LONG_MAX, LONG_MIN, ULONG_MAX, 0, -42);
+	// ft_printf("\n==p;%X=\n",-1);
+	// ft_printf("\n==p;%p=\n","");
+	// ft_printf("%c", '0');
+	// ft_printf("\n=====================\n");
+	// ft_printf(" %c ", '0');
+	// ft_printf("\n=====================\n");
+	// ft_printf(" %c", '0' - 256);
+	// ft_printf("\n=====================\n");
+	// ft_printf("%c ", '0' + 256);
+	// ft_printf("\n=====================\n");
+	// ft_printf(" %c %c %c ", '0', 0, '1');
+	// ft_printf("\n=====================\n");
+	// ft_printf(" %c %c %c ", ' ', ' ', ' ');
+	// ft_printf("\n=====================\n");
+	// ft_printf(" %c %c %c ", '1', '2', '3');
+	// ft_printf("\n=====================\n");
+	// ft_printf(" %c %c %c ", '2', '1', 0);
+	// ft_printf("\n=====================\n");
+	// ft_printf(" %c %c %c ", 0, '1', '2');
+	// ft_printf("\n=====================\n");
+	return (0);
 }
-// int main() {
-//     // char *str = "4444";
-//     char const *f1 = "\ntesting ||%d||----%a======%=====||%d||---||%d||%X|%-======\n%%%";
-
-//     ft_printf(f1, 12, 123, 210,  123);
-//     printf(f1, 12, 123, 210, 15);
-
-//     return 0;
-// }

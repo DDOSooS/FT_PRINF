@@ -13,15 +13,13 @@
 #include "ft_printf.h"
 #include<stdio.h>
 
-int	in_array(char c)
+int	in_array(char c, char *tab)
 {
-	char	*lst;
 	int		i;
 
 	i = -1;
-	lst = "cspdiuxX%";
-	while (lst[++i])
-		if (lst[i] == c)
+	while (tab[++i])
+		if (tab[i] == c)
 			return (1);
 	return (0);
 }
@@ -57,7 +55,7 @@ int	ft_printf(const char *format, ...)
 	va_start(arg, format);
 	while (format && format[i])
 	{
-		if (format[i] == '%' && format[i + 1] && in_array(format[i + 1]))
+		if (format[i] == '%' && format[i + 1] && (in_array(format[i + 1, "cspdiuxX%"])))
 		{
 			ft_checker(format[i + 1], arg, &wc_len);
 			i += 2;

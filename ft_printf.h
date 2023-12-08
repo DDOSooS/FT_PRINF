@@ -13,16 +13,16 @@
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
 
-#include <stdarg.h>
-#include <unistd.h>
-#include <stdio.h>
+# include <stdarg.h>
+# include <unistd.h>
+# include <stdio.h>
 
 int		ft_printf(const char *format, ...);
-void	ft_put_nbr(int  number);
-void	ft_put_unsigned_nbr(unsigned int number);
-void	ft_put_adresse(void *ptr);
-void 	ft_put_hex_nbr(unsigned int number, int	flag);
-void	ft_putchar(char c);
-void	ft_putstr(const char *str);
+void	ft_put_nbr(int number, int *counter);
+void	ft_put_unsigned_nbr(unsigned int number, int *counter);
+void	ft_put_adresse(unsigned long ptr, int *counter);
+void	ft_put_hex_nbr(unsigned int number, int flag, int *counter);
+void	ft_putchar(char c, int *counter);
+void	ft_putstr(const char *str, int *counter);
 
 #endif
